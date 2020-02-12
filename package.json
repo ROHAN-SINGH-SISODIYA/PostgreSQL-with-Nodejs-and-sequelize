@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./api/index.js",
-    "test": "SET NODE_ENV1=test &&  sequelize db:migrate:undo:all  && sequelize db:migrate  && nyc --require @babel/register  mocha ./api/test/test.js --timeout 20000 --exit"
+    "test": "SET NODE_ENV1=test &&  sequelize db:migrate:undo:all  && sequelize db:migrate  && nyc --require @babel/register  mocha ./api/test/BookTest.js --timeout 20000 --exit"
   },
   "keywords": [],
   "author": "",

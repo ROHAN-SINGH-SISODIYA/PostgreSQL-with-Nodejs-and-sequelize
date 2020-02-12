@@ -73,18 +73,6 @@ describe('Testing the book endpoints:',()=> {
              });
       });
 
-    //   it('It should not get a particular book with invalid id', (done) => {
-    //     const bookId = 8888;
-    //     chai.request(app)
-    //       .get(`/api/v1/books/${bookId}`)
-    //       .set('Accept', 'application/json')
-    //       .end((err, res) => {
-    //         expect(res.status).to.equal(404);
-    //         res.body.should.have.property('message').eql(`Cannot find book with the id ${bookId}`);
-    //         done();
-    //       });
-    //   });
-
       it('It should not get a particular book with non-numeric id', (done) => {
         const bookId = 'aaa';
         chai.request(app)
@@ -119,26 +107,6 @@ describe('Testing the book endpoints:',()=> {
             done();
           });
       });
-
-    //   it('It should not update a book with invalid id', (done) => {
-    //     const bookId = '9999';
-    //     const updatedBook = {
-    //       id: bookId,
-    //       title: 'Updated Awesome book again',
-    //       price: '$11.99',
-    //       description: 'We have updated the price'
-    //     };
-    //     chai.request(app)
-    //       .put(`/api/v1/books/${bookId}`)
-    //       .set('Accept', 'application/json')
-    //       .send(updatedBook)
-    //       .end((err, res) => {
-    //         expect(res.status).to.equal(404);
-    //         res.body.should.have.property('message')
-    //                             .eql(`Cannot find book with the id: ${bookId}`);
-    //         done();
-    //       });
-    //   });
 
       it('It should not update a book with non-numeric id value', (done) => {
         const bookId = 'ggg';
