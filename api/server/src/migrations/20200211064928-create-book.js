@@ -1,6 +1,9 @@
 'use strict';
+const withDateNoTz = require('sequelize-date-no-tz-postgres');
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
+    const DataTypes = withDateNoTz(Sequelize);
     return queryInterface.createTable('Books', {
       id: {
         allowNull: false,
@@ -22,11 +25,11 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATEONLY
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATEONLY
       }
     });
   },

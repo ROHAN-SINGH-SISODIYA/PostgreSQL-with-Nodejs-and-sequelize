@@ -1,3 +1,11 @@
+/**
+ *
+ * Description. This is Error and Success response Handling File.
+ *
+ * @email  rohanrajput32843@gmail.com
+ */
+/***/
+
 export default class Util{
     constructor(){
         this.statusCode =null;
@@ -12,7 +20,6 @@ export default class Util{
         this.data=data;
         this.type='success';
     }
-    
     setError(statusCode,message){
         this.statusCode=statusCode;
         this.message=message;
